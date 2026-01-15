@@ -10,7 +10,7 @@ export default function Home() {
         </p>
 
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-900 sm:text-6xl">
-          Ronald &amp; [Nombre]
+          Diego &amp; Estefanny
         </h1>
 
         <p className="mt-4 text-lg text-neutral-700 sm:text-xl">
