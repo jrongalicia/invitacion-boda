@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-200">
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-6 text-center">
         <p className="text-sm uppercase tracking-[0.3em] text-neutral-600">
-          Invitación de boda
+          Nuestra de boda
         </p>
 
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-900 sm:text-6xl">
@@ -29,7 +29,7 @@ export default function Home() {
             href="/rsvp"
             className="rounded-2xl border border-neutral-900 bg-white px-6 py-3 text-neutral-900 shadow-md transition hover:bg-neutral-100"
           >
-            Confirmar asistencia (RSVP)
+            Confirmar asistencia
           </Link>
         </div>
       </section>

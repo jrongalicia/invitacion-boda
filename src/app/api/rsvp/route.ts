@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       );
     }
 
-    if (attendees < 1 || attendees > 20) {
+    if (attendees < 1 || attendees > 2) {
       return NextResponse.json(
         { ok: false, message: "Cantidad inválida." },
         { status: 400 }
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true, rsvp });
   } catch (error) {
     return NextResponse.json(
-      { ok: false, message: "Error al guardar RSVP." },
+      { ok: false, message: "Error al guardar respuesta." },
       { status: 500 }
     );
   }
