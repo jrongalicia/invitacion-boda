@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function RsvpPage() {
+  const [clientId, setClientId] = useState<string>("");
   const [name, setName] = useState("");
   const [attending, setAttending] = useState("yes");
   const [attendees, setAttendees] = useState(1);
