@@ -53,15 +53,15 @@ export default function Home() {
             <div className="mt-8 overflow-hidden rounded-[28px] p-2 shadow-sm">
               <div className="grid grid-cols-3 gap-3">
                 <div className="relative aspect-[2/4] overflow-hidden rounded-2xl">
-                  <Image src="/portada/portada_estefanny.png" alt="left" fill className="object-cover" priority/>
+                  <Image src="/portada/portada_estefanny.PNG" alt="left" fill className="object-cover" priority/>
                 </div>
 
                 <div className="relative aspect-[2/4] overflow-hidden rounded-2xl">
-                  <Image src="/portada/portada_centro.png" alt="center" fill className="object-cover" priority />
+                  <Image src="/portada/portada_centro.PNG" alt="center" fill className="object-cover" priority />
                 </div>
 
                 <div className="relative aspect-[2/4] overflow-hidden rounded-2xl">
-                  <Image src="/portada/portada_diego.png" alt="right" fill className="object-cover" priority />
+                  <Image src="/portada/portada_diego.PNG" alt="right" fill className="object-cover" priority />
                 </div>
               </div>
             </div>
