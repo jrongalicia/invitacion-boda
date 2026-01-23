@@ -13,17 +13,17 @@ const EVENT = {
     "Nuestra felicidad solo está completa cuando la compartimos con las personas a las que amamos...",
   ceremony: {
     name: "Ceremonia Religiosa",
-    place: "Parroquia del Carmen",
+    place: "Cúpula hacienda los volcanes",
     time: "5:00 PM",
-    address: "Dirección completa aquí",
-    maps: "https://www.google.com/maps?q=14.6349,-90.5069",
+    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de antigua guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez ",
+    maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
   },
   reception: {
     name: "Recepción",
-    place: "Córdoba Club",
+    place: "Salón volcán acatenango",
     time: "7:00 PM",
-    address: "Dirección completa aquí",
-    maps: "https://www.google.com/maps?q=14.6349,-90.5069",
+    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de antigua guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez",
+    maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
   },
   dressCode: "Vestimenta formal",
 };
