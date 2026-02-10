@@ -6,6 +6,8 @@ import ParallaxHero from "@/components/ParallaxHero";
 import FloralsCorners from "@/components/FloralsCorners";
 import FloralDivider from "@/components/FloralDivider";
 import FloralsCornersNatural from "@/components/FloralsCornersNatural";
+import PetalsRain from "@/components/PetalsRain";
+
 
 
 const EVENT = {
@@ -20,16 +22,30 @@ const EVENT = {
   },
   ceremony: {
     name: "Ceremonia Religiosa",
-    place: "Cúpula hacienda los volcanes",
+    place: {
+      main: "Hacienda los volcanes",
+      detail: "Cúpula",
+    },
     time: "5:00 PM",
-    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de Antigua Guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez ",
+    address: {
+      main: "Hacienda los volcanes",
+      detail:
+        "km. 30, Granja #37, Ruta de Antigua Guatemala hacia Bárcenas, Santa Lucía Milpas Altas, Sacatepéquez",
+    },
     maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
   },
   reception: {
     name: "Recepción",
-    place: "Salón volcán acatenango",
+    place: {
+      main: "Hacienda los volcanes",
+      detail: "Salón volcán Acatenango",
+    },
     time: "6:45 PM",
-    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de antigua guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez",
+    address: {
+      main: "Hacienda los volcanes",
+      detail:
+        "km. 30, Granja #37, Ruta de Antigua Guatemala hacia Bárcenas, Santa Lucía Milpas Altas, Sacatepéquez",
+    },
     maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
   },
   dressCode: "",
@@ -38,6 +54,7 @@ const EVENT = {
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
+      <PetalsRain />
       <FloralsCornersNatural />
       <div className="relative z-10 mx-auto max-w-md px-6 py-10 sm:max-w-lg">
         {/*<img src="/hero.jpg" className="h-full w-full object-cover" alt="Hero" />  mx-auto max-w-md px-6 py-10 sm:max-w-lg*/}
@@ -121,7 +138,7 @@ export default function Home() {
         <section className="mt-10">
           <Reveal>
             <VenueCard
-              icon="⛪"
+              icon="🥂"
               title={EVENT.reception.place}
               subtitle={EVENT.reception.name}
               time={EVENT.reception.time}
@@ -200,7 +217,7 @@ export default function Home() {
               </p>
 
               <p className="mt-5 text-xs uppercase tracking-[0.3em] text-neutral-600">
-                Con mucho amor, les pedimos <strong><strong>evitar</strong></strong> los siguientes colores para mantener la armonía y elegancia de este día tan especial.
+                Con mucho amor, les pedimos <strong>evitar</strong> los siguientes colores para mantener la armonía y elegancia de este día tan especial.
               </p>
 
               <div className="mt-4 flex items-center justify-center gap-3">
@@ -434,10 +451,10 @@ function VenueCard({
   buttonLabel,
 }: {
   icon: string;
-  title: string;
+  title: { main: string; detail: string };
   subtitle: string;
   time: string;
-  address: string;
+  address: { main: string; detail: string };
   href: string;
   buttonLabel: string;
 }) {
@@ -447,8 +464,12 @@ function VenueCard({
         {icon}
       </div>
 
-      <p className="mt-5 font-serif text-2xl font-semibold text-neutral-900">
-        {title}
+      {/* LUGAR (negrita + salto) */}
+      <p className="mt-5 font-serif text-2xl text-neutral-900">
+        <span className="block font-semibold">{title.main}</span>
+        <span className="block mt-1 text-base font-normal text-neutral-700">
+          {title.detail}
+        </span>
       </p>
 
       <p className="mt-2 text-xs uppercase tracking-[0.35em] text-neutral-600">
@@ -467,7 +488,12 @@ function VenueCard({
           <p className="text-[11px] uppercase tracking-[0.3em] text-neutral-600">
             Dirección
           </p>
-          <p className="mt-1 text-sm leading-6 text-neutral-800">{address}</p>
+
+          {/* DIRECCIÓN (negrita + salto) */}
+          <p className="mt-1 text-sm leading-6 text-neutral-800">
+            <span className="block font-medium">{address.main}</span>
+            <span className="block mt-1 text-neutral-700">{address.detail}</span>
+          </p>
         </div>
       </div>
 
@@ -476,12 +502,13 @@ function VenueCard({
         target="_blank"
         rel="noreferrer"
         className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl border px-6 py-3 font-medium shadow-sm transition hover:bg-neutral-50 active:scale-[0.99]"
-        style={{
-          borderColor: "#BFA76A",
-          color: "#6B5E2E",
-        }}
+        style={{ borderColor: "#BFA76A", color: "#6B5E2E" }}
       >
-        {icon === "⛪" ? <ChurchLocationIcon className="h-5 w-5" /> : <ReceptionIcon className="h-5 w-5" />}
+        {icon === "⛪" ? (
+          <ChurchLocationIcon className="h-5 w-5" />
+        ) : (
+          <ReceptionIcon className="h-5 w-5" />
+        )}
         {buttonLabel}
       </a>
     </div>

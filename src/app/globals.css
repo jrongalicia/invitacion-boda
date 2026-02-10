@@ -38,3 +38,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }*/
+
+.petal {
+  position: absolute;
+  top: -10%;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 30% 30%, #f7c9d9, #e9a7be);
+  border-radius: 60% 40% 60% 40%;
+  opacity: 0.8;
+
+  animation-name: fall;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
