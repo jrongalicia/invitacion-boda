@@ -280,7 +280,7 @@ export default function Home() {
                 >
                   <span className="inline-flex items-center justify-center gap-3">
                     <WhatsAppIcon className="h-5 w-5" />
-                    Confirmar con Diego
+                    Confirmar con Estefanny
                   </span>
                 </a>
                 <a
@@ -294,7 +294,7 @@ export default function Home() {
                 >
                   <span className="inline-flex items-center justify-center gap-3">
                     <WhatsAppIcon className="h-5 w-5" />
-                    Confirmar con Estefanny
+                    Confirmar con Diego
                   </span>
                 </a>
               </div>
