@@ -20,7 +20,7 @@ export default function FloralsCornersNatural() {
           className="-translate-x-8 -translate-y-8"
         >
           <Image
-            src="/fondo/fondoarriba.PNG"
+            src="/fondo/fondoarriba.png"
             alt=""
             width={520}
             height={520}
@@ -45,7 +45,7 @@ export default function FloralsCornersNatural() {
           className="translate-x-8 translate-y-8"
         >
           <Image
-            src="/fondo/fondoabajo.PNG"
+            src="/fondo/fondoabajo.png"
             alt=""
             width={520}
             height={520}
