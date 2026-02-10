@@ -109,23 +109,23 @@ export default function Home() {
           <Reveal>
             <div className="grid grid-cols-3 gap-3">
               <div className="relative h-[180px] overflow-hidden rounded-2xl">
-                <Image src="/mosaico/mosaico9.jpg" alt="" fill className="object-cover" />
+                <Image src="/mosaico/mosaico9.JPG" alt="" fill className="object-cover" />
               </div>
 
               <div className="relative h-[240px] overflow-hidden rounded-2xl">
-                <Image src="/mosaico/mosaico2.jpg" alt="" fill className="object-cover" />
+                <Image src="/mosaico/mosaico2.JPG" alt="" fill className="object-cover" />
               </div>
 
               <div className="relative h-[180px] overflow-hidden rounded-2xl">
-                <Image src="/mosaico/mosaico3.jpg" alt="" fill className="object-cover" />
+                <Image src="/mosaico/mosaico3.JPG" alt="" fill className="object-cover" />
               </div>
 
               <div className="relative col-span-2 h-[220px] overflow-hidden rounded-2xl">
-                <Image src="/mosaico/mosaico7.jpg" alt="" fill className="object-cover" />
+                <Image src="/mosaico/mosaico7.JPG" alt="" fill className="object-cover" />
               </div>
 
               <div className="relative h-[220px] overflow-hidden rounded-2xl">
-                <Image src="/mosaico/mosaico11.jpg" alt="" fill className="object-cover" />
+                <Image src="/mosaico/mosaico11.JPG" alt="" fill className="object-cover" />
               </div>
             </div>
           </Reveal>
