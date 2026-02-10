@@ -37,9 +37,21 @@ export default function Countdown({ dateISO }: { dateISO: string }) {
         Cuenta regresiva
       </p>
 
-      <p className="mt-2 font-serif text-2xl font-semibold text-neutral-900 sm:text-3xl">
-        {diff.isPast ? "¡Hoy es el gran día! " : "Falta poco "}
+      <p className="mt-2 font-serif text-2xl font-semibold text-neutral-900 sm:text-1xl leading-snug">
+        {diff.isPast ? (
+          <span>¡Hoy es el gran día! 💍</span>
+        ) : (
+          <>
+            <span className="block">
+              Cada día estamos más cerca de nuestro “sí, acepto” 💖
+            </span>
+            <span className="block mt-1 text-base font-normal text-neutral-700">
+              Contando los latidos para vivirlo junto a ustedes.
+            </span>
+          </>
+        )}
       </p>
+
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Stat label="Días" value={String(diff.days)} />

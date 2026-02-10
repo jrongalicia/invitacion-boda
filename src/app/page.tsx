@@ -12,8 +12,12 @@ const EVENT = {
   couple: "Diego & Estefanny",
   dateISO: "2026-03-21T16:30:00-06:00",
   dateLabel: "21.03.26",
-  quote:
-    "Nuestra felicidad solo está completa cuando la compartimos con las personas a las que amamos...",
+  quote: {
+    highlight:
+      "El amor nos unió y la vida nos regaló una historia que queremos celebrar.",
+    text:
+      "Nada nos haría más felices que compartir este día tan especial contigo, porque los momentos más hermosos se viven mejor junto a quienes amamos.",
+  },
   ceremony: {
     name: "Ceremonia Religiosa",
     place: "Cúpula hacienda los volcanes",
@@ -78,7 +82,12 @@ export default function Home() {
           <Reveal>
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
               <p className="mt-5 text-sm leading-6 text-neutral-800">
-                {EVENT.quote}
+                <strong className="block font-semibold">
+                  {EVENT.quote.highlight}
+                </strong>
+                <span className="block mt-2">
+                  {EVENT.quote.text}
+                </span>
               </p>
 
               <div className="mt-7 h-px bg-neutral-200" />
@@ -191,7 +200,7 @@ export default function Home() {
               </p>
 
               <p className="mt-5 text-xs uppercase tracking-[0.3em] text-neutral-600">
-                Agradecemos <strong>evitar</strong> los siguientes colores
+                Con mucho amor, les pedimos <strong><strong>evitar</strong></strong> los siguientes colores para mantener la armonía y elegancia de este día tan especial.
               </p>
 
               <div className="mt-4 flex items-center justify-center gap-3">
@@ -220,16 +229,26 @@ export default function Home() {
               </p>
 
               <p className="mt-4 text-sm leading-6 text-neutral-700">
-                Su presencia es nuestro mejor regalo.
+                <span className="block">
+                  Su presencia es nuestro mayor regalo y lo más valioso para nosotros.
+                </span>
+                <span className="block mt-2">
+                  Si desean tener un detalle adicional, lo recibiremos con mucho cariño.
+                </span>
               </p>
 
               {/* Botón Cemaco */}
               <a
-                href="https://www.cemaco.com/list/BODADIEGOYESTEFANNY21032026" 
+                href="https://www.cemaco.com/list/BODADIEGOYESTEFANNY21032026"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:opacity-90"
+                className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl border px-6 py-3 font-medium shadow-sm transition hover:bg-neutral-50 active:scale-[0.99]"
+                style={{
+                  borderColor: "#BFA76A", // dorado suave
+                  color: "#6B5E2E",
+                }}
               >
+                <GiftIcon className="h-5 w-5" />
                 Ver lista de regalos
               </a>
             </div>
@@ -238,31 +257,63 @@ export default function Home() {
 
 
 
-        {/* CTA (por ahora sin RSVP) */}
+        {/* CONFIRMACION */}
         <section className="mt-10 pb-14">
+          <Reveal>
+            <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
+              <p className="font-serif text-2xl font-semibold text-neutral-900">
+                Confirmación
+              </p>
+              <p className="mt-2 text-sm text-neutral-700">
+                Con mucho cariño, les pedimos confirmar su asistencia escribiéndonos por WhatsApp.
+              </p>
+
+              <div className="mt-6 flex flex-col gap-3">
+                <a
+                  href={`https://wa.me/50258542180?text=${encodeURIComponent(
+                    "Hola 💕 Con mucha ilusión confirmo mi asistencia a la boda de Diego & Estefanny. ¡Gracias por hacernos parte de este día tan especial!"
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border bg-white px-6 py-3 shadow-sm transition hover:bg-neutral-50 active:scale-[0.99]"
+                  style={{ borderColor: "#25D366", color: "#25D366" }}
+                >
+                  <span className="inline-flex items-center justify-center gap-3">
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Confirmar con Diego
+                  </span>
+                </a>
+                <a
+                  href={`https://wa.me/50230128382?text=${encodeURIComponent(
+                    "Hola 💕 Con mucha ilusión confirmo mi asistencia a la boda de Diego & Estefanny. ¡Gracias por hacernos parte de este día tan especial!"
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border bg-white px-6 py-3 shadow-sm transition hover:bg-neutral-50 active:scale-[0.99]"
+                  style={{ borderColor: "#25D366", color: "#25D366" }}
+                >
+                  <span className="inline-flex items-center justify-center gap-3">
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Confirmar con Estefanny
+                  </span>
+                </a>
+              </div>
+
+            </div>
+          </Reveal>
+        </section>
+
+        {/* DESPEDIDA */}
+        <section className="">
           <Reveal>
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
               <p className="font-serif text-2xl font-semibold text-neutral-900">
                 ¡Te esperamos!
               </p>
               <p className="mt-2 text-sm text-neutral-700">
-                Agradeceríamos pudiera confirmar tu asistencia en el siguiente botón.
+                ¡Los esperamos con el corazón lleno de amor!
+                Gracias por acompañarnos en este momento tan importante de nuestras vidas.
               </p>
-
-              <div className="mt-6 flex flex-col gap-3">
-                <a
-                  className="rounded-2xl border border-neutral-900 bg-white px-6 py-3 text-neutral-900 shadow-sm transition hover:bg-neutral-100"
-                  href={`https://wa.me/50200000000?text=${encodeURIComponent(
-                    "Hola! Tengo una duda sobre la boda 🙂"
-                  )}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  color="bg-green-600"
-                >
-                  Escribir por WhatsApp
-                </a>
-              </div>
-
             </div>
           </Reveal>
         </section>
@@ -271,51 +322,7 @@ export default function Home() {
   );
 }
 
-function Card({
-  icon,
-  title,
-  subtitle,
-  meta,
-  buttonLabel,
-  buttonHref,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  subtitle: string;
-  meta: { k: string; v: string }[];
-  buttonLabel: string;
-  buttonHref: string;
-}) {
-  return (
-    <div className="rounded-[28px] bg-white px-6 py-8 shadow-sm">
-      <div className="flex items-center justify-center">{icon}</div>
-      <p className="mt-4 text-center font-serif text-2xl font-semibold text-neutral-900">
-        {title}
-      </p>
-      <p className="mt-1 text-center text-xs uppercase tracking-[0.35em] text-neutral-600">
-        {subtitle}
-      </p>
 
-      <div className="mt-6 space-y-3">
-        {meta.map((m) => (
-          <div key={m.k} className="grid grid-cols-12 gap-3 text-sm">
-            <div className="col-span-3 font-medium text-neutral-700">{m.k}</div>
-            <div className="col-span-9 text-neutral-800">{m.v}</div>
-          </div>
-        ))}
-      </div>
-
-      <a
-        href={buttonHref}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:opacity-90"
-      >
-        {buttonLabel}
-      </a>
-    </div>
-  );
-}
 
 function Timeline({
   items,
@@ -468,10 +475,95 @@ function VenueCard({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:opacity-90"
+        className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl border px-6 py-3 font-medium shadow-sm transition hover:bg-neutral-50 active:scale-[0.99]"
+        style={{
+          borderColor: "#BFA76A",
+          color: "#6B5E2E",
+        }}
       >
+        {icon === "⛪" ? <ChurchLocationIcon className="h-5 w-5" /> : <ReceptionIcon className="h-5 w-5" />}
         {buttonLabel}
       </a>
     </div>
   );
 }
+
+function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      className={className}
+      aria-hidden="true"
+      fill="#25D366"
+    >
+      <path d="M19.11 17.44c-.28-.14-1.64-.81-1.89-.9-.26-.09-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.16.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.64-1.54-1.92-.16-.28-.02-.43.12-.57.12-.12.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.87-2.11-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.34 0 1.38 1 2.72 1.14 2.91.14.19 1.97 3.01 4.78 4.22.67.29 1.19.46 1.59.59.67.21 1.27.18 1.75.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.21.16-1.32-.07-.11-.26-.18-.54-.32z" />
+      <path d="M26.67 5.33C24.01 2.67 20.52 1.2 16.76 1.2 9.1 1.2 2.87 7.43 2.87 15.09c0 2.45.64 4.84 1.86 6.94L2.76 30.8l8.97-1.93c2.04 1.11 4.34 1.69 6.7 1.69h.01c7.66 0 13.89-6.23 13.89-13.89 0-3.76-1.47-7.25-4.13-9.91zM18.43 28.2h-.01c-2.13 0-4.21-.57-6.02-1.64l-.43-.25-5.33 1.15 1.13-5.19-.28-.45c-1.18-1.88-1.8-4.04-1.8-6.23 0-6.33 5.15-11.49 11.49-11.49 3.07 0 5.95 1.2 8.12 3.37 2.17 2.17 3.37 5.05 3.37 8.12 0 6.33-5.15 11.49-11.24 11.61z" />
+    </svg>
+  );
+}
+
+
+function GiftIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="3" y="8" width="18" height="13" rx="2" />
+      <path d="M3 12h18" />
+      <path d="M12 8v13" />
+      <path d="M7.5 8c-1.5 0-2.5-1-2.5-2.2C5 4.2 6.3 3 8 3c2 0 4 2.5 4 5" />
+      <path d="M16.5 8c1.5 0 2.5-1 2.5-2.2C19 4.2 17.7 3 16 3c-2 0-4 2.5-4 5" />
+    </svg>
+  );
+}
+
+function ChurchLocationIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 2v6" />
+      <path d="M9 5h6" />
+      <path d="M5 10l7-5 7 5" />
+      <path d="M6 10v10h12V10" />
+      <path d="M10 20v-5h4v5" />
+    </svg>
+  );
+}
+
+function ReceptionIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 3v6a4 4 0 0 0 8 0V3" />
+      <path d="M6 3h12" />
+      <path d="M12 13v7" />
+      <path d="M8 20h8" />
+    </svg>
+  );
+}
+
+
+
