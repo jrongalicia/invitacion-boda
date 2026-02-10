@@ -25,6 +25,7 @@ export default function FloralsCornersNatural() {
             width={520}
             height={520}
             priority
+            unoptimized
             className="w-[260px] sm:w-[340px] opacity-90"
           />
         </motion.div>
@@ -33,7 +34,7 @@ export default function FloralsCornersNatural() {
       {/* BOTTOM RIGHT */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-0 z-0"
+        className="pointer-events-none fixed bottom-0 right-0 z-0"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
@@ -48,6 +49,7 @@ export default function FloralsCornersNatural() {
             alt=""
             width={520}
             height={520}
+            unoptimized
             className="w-[260px] sm:w-[340px] opacity-80"
           />
         </motion.div>
