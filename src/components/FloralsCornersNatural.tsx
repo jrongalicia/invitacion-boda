@@ -15,9 +15,18 @@ export default function FloralsCornersNatural() {
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           className="-translate-x-8 -translate-y-8"
+          animate={{
+            y: [0, 16, -6, 12, 0],
+            x: [0, 6, -4, 5, 0],
+            rotate: [0, 1.5, -1.2, 1.2, 0],
+            scale: [1, 1.02, 0.99, 1.015, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <Image
             src="/fondo/fondoarriba.png"
@@ -25,7 +34,6 @@ export default function FloralsCornersNatural() {
             width={520}
             height={520}
             priority
-            unoptimized
             className="w-[260px] sm:w-[340px] opacity-90"
           />
         </motion.div>
@@ -40,16 +48,24 @@ export default function FloralsCornersNatural() {
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
       >
         <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="translate-x-8 translate-y-8"
+          animate={{
+            y: [0, -18, 8, -12, 0],
+            x: [0, -7, 5, -6, 0],
+            rotate: [0, -1.6, 1.1, -1.2, 0],
+            scale: [1, 1.015, 0.99, 1.02, 1],
+          }}
+          transition={{
+            duration: 13.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <Image
             src="/fondo/fondoabajo.png"
             alt=""
             width={520}
             height={520}
-            unoptimized
             className="w-[260px] sm:w-[340px] opacity-80"
           />
         </motion.div>
