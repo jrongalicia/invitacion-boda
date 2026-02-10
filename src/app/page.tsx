@@ -3,6 +3,9 @@ import Countdown from "@/components/Countdown";
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
 import ParallaxHero from "@/components/ParallaxHero";
+import FloralsCorners from "@/components/FloralsCorners";
+import FloralDivider from "@/components/FloralDivider";
+import FloralsCornersNatural from "@/components/FloralsCornersNatural";
 
 
 const EVENT = {
@@ -15,24 +18,25 @@ const EVENT = {
     name: "Ceremonia Religiosa",
     place: "Cúpula hacienda los volcanes",
     time: "5:00 PM",
-    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de antigua guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez ",
+    address: "Hacienda los volcanes km. 30, Granja #37, Ruta de Antigua Guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez ",
     maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
   },
-  /*reception: {
+  reception: {
     name: "Recepción",
     place: "Salón volcán acatenango",
-    time: "7:00 PM",
+    time: "6:45 PM",
     address: "Hacienda los volcanes km. 30, Granja #37, Ruta de antigua guatemla hacia Bárcenas, Santa Lucía milpas altas, Sacatepequez",
     maps: "https://maps.app.goo.gl/eULnkmWh2Uk85ch19",
-  },*/
+  },
   dressCode: "",
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <div className="mx-auto max-w-md px-6 py-10 sm:max-w-lg">
-        {/*<img src="/hero.jpg" className="h-full w-full object-cover" alt="Hero" />*/}
+    <main className="relative min-h-screen overflow-hidden">
+      <FloralsCornersNatural />
+      <div className="relative z-10 mx-auto max-w-md px-6 py-10 sm:max-w-lg">
+        {/*<img src="/hero.jpg" className="h-full w-full object-cover" alt="Hero" />  mx-auto max-w-md px-6 py-10 sm:max-w-lg*/}
         <section className="text-center">
           <Reveal>
             <div className="mx-auto w-14 text-neutral-900">
@@ -104,7 +108,26 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* MOSAICO DE FOTOS */}
+        {/* RECEPCION */}
+        <section className="mt-10">
+          <Reveal>
+            <VenueCard
+              icon="⛪"
+              title={EVENT.reception.place}
+              subtitle={EVENT.reception.name}
+              time={EVENT.reception.time}
+              address={EVENT.reception.address}
+              href={EVENT.reception.maps}
+              buttonLabel="Ver ubicación"
+            />
+          </Reveal>
+        </section>
+
+        <section className="mt-10">
+          <FloralDivider />
+        </section>
+
+        {/* COLLAGE DE FOTOS */}
         <section className="mt-12">
           <Reveal>
             <div className="grid grid-cols-3 gap-3">
@@ -130,27 +153,6 @@ export default function Home() {
             </div>
           </Reveal>
         </section>
-
-
-
-
-
-        {/* RECEPCIÓN 
-        /*<section className="mt-6">
-          <Reveal>
-            <Card
-              icon={<ToastIcon />}
-              title={EVENT.reception.place}
-              subtitle={EVENT.reception.name}
-              meta={[
-                { k: "Hora", v: EVENT.reception.time },
-                { k: "Dirección", v: EVENT.reception.address },
-              ]}
-              buttonLabel="Ver ubicación"
-              buttonHref={EVENT.reception.maps}
-            />
-          </Reveal>
-        </section>*/}
 
         {/* ITINERARIO */}
         <section className="mt-10">
@@ -223,7 +225,7 @@ export default function Home() {
 
               {/* Botón Cemaco */}
               <a
-                href="https://www.cemaco.com/list/BODADIEGOYESTEFANNY21032026"  // ← aquí va tu link real
+                href="https://www.cemaco.com/list/BODADIEGOYESTEFANNY21032026" 
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:opacity-90"
@@ -244,17 +246,10 @@ export default function Home() {
                 ¡Te esperamos!
               </p>
               <p className="mt-2 text-sm text-neutral-700">
-                Gracias por acompañarnos en este momento tan importante.
+                Agradeceríamos pudiera confirmar tu asistencia en el siguiente botón.
               </p>
 
-              {/*<div className="mt-6 flex flex-col gap-3">
-                <Link
-                  href="/details"
-                  className="rounded-2xl bg-neutral-900 px-6 py-3 text-white shadow-sm transition hover:opacity-90"
-                >
-                  Ver más detalles
-                </Link>
-
+              <div className="mt-6 flex flex-col gap-3">
                 <a
                   className="rounded-2xl border border-neutral-900 bg-white px-6 py-3 text-neutral-900 shadow-sm transition hover:bg-neutral-100"
                   href={`https://wa.me/50200000000?text=${encodeURIComponent(
@@ -262,10 +257,11 @@ export default function Home() {
                   )}`}
                   target="_blank"
                   rel="noreferrer"
+                  color="bg-green-600"
                 >
                   Escribir por WhatsApp
                 </a>
-              </div>*/}
+              </div>
 
             </div>
           </Reveal>
