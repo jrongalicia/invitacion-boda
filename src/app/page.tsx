@@ -119,7 +119,7 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* INVITACIÓN – RITMO IGUAL A FRASE */}
+        {/* INVITACIÓN */}
         <section className="mt-10">
           <Reveal>
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
@@ -135,30 +135,38 @@ export default function Home() {
                 </span>
               </p>
 
-              {/* MISMO ESPACIADO QUE FRASE */}
               <div className="mt-7 h-px bg-neutral-200" />
 
-              <div className="mt-7 space-y-3">
-                <p className="font-serif text-lg tracking-wide text-neutral-900">
-                  Edgar Rolando Ibañez Chávez
-                </p>
-                <p className="font-serif text-lg tracking-wide text-neutral-900">
-                  Norma Edith Trujillo Peralta
-                </p>
+              <div className="mt-7 space-y-4">
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+                    Padres del novio
+                  </p>
+                  <p className="font-serif font-medium text-base sm:text-lg text-neutral-900">
+                    Edgar Rolando Ibañez Chávez
+                  </p>
+                  <p className="font-serif font-medium text-base sm:text-lg text-neutral-900">
+                    Norma Edith Trujillo Peralta
+                  </p>
+                </div>
 
-                <div className="my-4 h-px w-16 mx-auto bg-neutral-300" />
+                <OrnateDivider className="my-5" stroke="#000000" />
 
-                <p className="font-serif text-lg tracking-wide text-neutral-900">
-                  Carlos Francisco Solís Ramírez
-                </p>
-                <p className="font-serif text-lg tracking-wide text-neutral-900">
-                  Brenda Lissette Higueros Paz
-                </p>
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+                    Padres de la novia
+                  </p>
+                  <p className="font-serif font-medium text-base sm:text-lg text-neutral-900">
+                    Carlos Francisco Solís Ramírez
+                  </p>
+                  <p className="font-serif font-medium text-base sm:text-lg text-neutral-900">
+                    Brenda Lissette Higueros Paz
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>
         </section>
-
 
 
         {/* CEREMONIA */}
@@ -631,6 +639,144 @@ function ReceptionIcon({ className = "h-5 w-5" }: { className?: string }) {
       <path d="M12 13v7" />
       <path d="M8 20h8" />
     </svg>
+  );
+}
+
+function OrnateDivider({
+  className = "my-6",
+  stroke = "#BFA76A",
+}: {
+  className?: string;
+  stroke?: string;
+}) {
+  return (
+    <div className={className} aria-hidden>
+      <svg
+        viewBox="0 0 1200 120"
+        className="mx-auto h-7 w-72 sm:w-96"
+        fill="none"
+      >
+        {/* Línea principal */}
+        <path
+          d="M180 60 H1020"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          opacity="0.95"
+        />
+
+        {/* Ornamento central (tipo flor/diamante) */}
+        <path
+          d="M600 46
+             C608 54, 608 66, 600 74
+             C592 66, 592 54, 600 46 Z"
+          stroke={stroke}
+          strokeWidth="3"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M586 60
+             C594 52, 606 52, 614 60
+             C606 68, 594 68, 586 60 Z"
+          stroke={stroke}
+          strokeWidth="3"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+
+        {/* Ornamentos laterales pequeños */}
+        {[
+          { x: 390 },
+          { x: 810 },
+        ].map((o, i) => (
+          <g key={i} opacity="0.95">
+            <path
+              d={`M${o.x} 52 L${o.x + 8} 60 L${o.x} 68 L${o.x - 8} 60 Z`}
+              stroke={stroke}
+              strokeWidth="2.6"
+              strokeLinejoin="round"
+            />
+            <path
+              d={`M${o.x - 14} 60 H${o.x - 8}`}
+              stroke={stroke}
+              strokeWidth="2.6"
+              strokeLinecap="round"
+            />
+            <path
+              d={`M${o.x + 8} 60 H${o.x + 14}`}
+              stroke={stroke}
+              strokeWidth="2.6"
+              strokeLinecap="round"
+            />
+          </g>
+        ))}
+
+        {/* Rizo izquierdo (como la imagen) */}
+        <path
+          d="M180 60
+             C150 40, 120 40, 120 60
+             C120 80, 150 80, 180 60"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M150 60
+             C130 50, 130 30, 155 28
+             C140 38, 145 52, 160 56"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M150 60
+             C130 70, 130 90, 155 92
+             C140 82, 145 68, 160 64"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+
+        {/* Rizo derecho (espejo) */}
+        <path
+          d="M1020 60
+             C1050 40, 1080 40, 1080 60
+             C1080 80, 1050 80, 1020 60"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M1050 60
+             C1070 50, 1070 30, 1045 28
+             C1060 38, 1055 52, 1040 56"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+        <path
+          d="M1050 60
+             C1070 70, 1070 90, 1045 92
+             C1060 82, 1055 68, 1040 64"
+          stroke={stroke}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.95"
+        />
+      </svg>
+    </div>
   );
 }
 
