@@ -127,8 +127,8 @@ export default function Home() {
                 <span className="block">
                   Tenemos el honor de invitarlos a nuestro enlace matrimonial
                 </span>
-                <span className="block mt-2">
-                  Con la bendición de Dios y el amor que nos formó,
+                <span className="block">
+                  con la bendición de Dios y el amor que nos formó,
                 </span>
                 <span className="block">
                   y la guía de quienes siempre han estado a nuestro lado:
