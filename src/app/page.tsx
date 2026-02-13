@@ -22,6 +22,9 @@ const EVENT = {
     text:
       "Nada nos haría más felices que compartir este día tan especial contigo, porque los momentos más hermosos se viven mejor junto a quienes amamos.",
   },
+  weddingInvitation: {
+    text: "Tenemos el honor de invitarles a nuestro enlace matrimonial con la bendición de Dios y el amor de nuestros padres, quienes han sido nuestro ejemplo y apoyo incondicional:"
+  },
   ceremony: {
     name: "Ceremonia Religiosa",
     place: {
@@ -127,12 +130,8 @@ export default function Home() {
           <Reveal>
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
               <p className="text-sm leading-6 text-neutral-800">
-                <span className="block text-[10px]">
-                  Tenemos el honor de invitarles a nuestro enlace matrimonial con la bendición de Dios
-                </span>
-                
-                <span className="block text-[10px]">
-                  y el amor de nuestros padres, quienes han sido nuestro ejemplo y apoyo incondicional:
+                <span className="block ">
+                  {EVENT.weddingInvitation.text}
                 </span>
               </p>
 
