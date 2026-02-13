@@ -128,13 +128,13 @@ export default function Home() {
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
               <p className="text-sm leading-6 text-neutral-800">
                 <span className="block">
-                  Tenemos el honor de invitarlos a nuestro enlace matrimonial
+                  Tenemos el honor de invitarles a nuestro enlace matrimonial
                 </span>
                 <span className="block">
-                  con la bendición de Dios y el amor que nos formó,
+                  con la bendición de Dios y el amor de nuestros padres,
                 </span>
                 <span className="block">
-                  y la guía de quienes siempre han estado a nuestro lado:
+                  quienes han sido nuestro ejemplo y apoyo incondicional:
                 </span>
               </p>
 
