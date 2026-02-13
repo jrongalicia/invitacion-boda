@@ -272,7 +272,6 @@ export default function Home() {
 
               <div className="mt-4 flex items-center justify-center gap-3">
                 <span className="h-6 w-6 rounded-full bg-black" />
-                <span className="h-6 w-6 rounded-full bg-neutral-300" />
                 <span className="h-6 w-6 rounded-full bg-white ring-1 ring-neutral-300" />
                 <span className="h-6 w-6 rounded-full bg-red-700" />
               </div>
