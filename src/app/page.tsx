@@ -127,14 +127,12 @@ export default function Home() {
           <Reveal>
             <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
               <p className="text-sm leading-6 text-neutral-800">
-                <span className="block">
-                  Tenemos el honor de invitarles a nuestro enlace matrimonial
+                <span className="block text-[11px]">
+                  Tenemos el honor de invitarles a nuestro enlace matrimonial con la bendición de Dios
                 </span>
-                <span className="block">
-                  con la bendición de Dios y el amor de nuestros padres,
-                </span>
-                <span className="block">
-                  quienes han sido nuestro ejemplo y apoyo incondicional:
+                
+                <span className="block text-[11px]">
+                  y el amor de nuestros padres, quienes han sido nuestro ejemplo y apoyo incondicional:
                 </span>
               </p>
 
