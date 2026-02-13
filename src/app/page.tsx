@@ -7,6 +7,8 @@ import FloralsCorners from "@/components/FloralsCorners";
 import FloralDivider from "@/components/FloralDivider";
 import FloralsCornersNatural from "@/components/FloralsCornersNatural";
 import PetalsRain from "@/components/PetalsRain";
+import ScrollHint from "@/components/ScrollHint";
+
 
 
 
@@ -54,6 +56,7 @@ const EVENT = {
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
+      <ScrollHint />
       <PetalsRain />
       <FloralsCornersNatural />
       <div className="relative z-10 mx-auto max-w-md px-6 py-10 sm:max-w-lg">
