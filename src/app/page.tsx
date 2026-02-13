@@ -78,7 +78,7 @@ export default function Home() {
             <div className="mt-8 overflow-hidden rounded-[28px] p-4 shadow-sm">
               <div className="grid grid-cols-3 gap-3">
                 <div className="relative aspect-[2/4] overflow-hidden rounded-2xl">
-                  <Image src="/portada/portada_estefanny.PNG" alt="left" fill className="object-cover" priority/>
+                  <Image src="/portada/portada_estefanny.PNG" alt="left" fill className="object-cover" priority />
                 </div>
 
                 <div className="object-cover scale-[1.1] object-center overflow-hidden rounded-2xl">
@@ -110,7 +110,7 @@ export default function Home() {
               <div className="mt-7 h-px bg-neutral-200" />
 
               <div className="mt-7">
-                
+
                 <div className="mt-4">
                   <Countdown dateISO={EVENT.dateISO} />
                 </div>
@@ -118,6 +118,48 @@ export default function Home() {
             </div>
           </Reveal>
         </section>
+
+        {/* INVITACIÓN – RITMO IGUAL A FRASE */}
+        <section className="mt-10">
+          <Reveal>
+            <div className="rounded-[28px] bg-white px-6 py-8 text-center shadow-sm">
+              <p className="text-sm leading-6 text-neutral-800">
+                <span className="block">
+                  Tenemos el honor de invitarlos a nuestro enlace matrimonial
+                </span>
+                <span className="block mt-2">
+                  Con la bendición de Dios y el amor que nos formó,
+                </span>
+                <span className="block">
+                  y la guía de quienes siempre han estado a nuestro lado:
+                </span>
+              </p>
+
+              {/* MISMO ESPACIADO QUE FRASE */}
+              <div className="mt-7 h-px bg-neutral-200" />
+
+              <div className="mt-7 space-y-3">
+                <p className="font-serif text-lg tracking-wide text-neutral-900">
+                  Edgar Rolando Ibañez Chávez
+                </p>
+                <p className="font-serif text-lg tracking-wide text-neutral-900">
+                  Norma Edith Trujillo Peralta
+                </p>
+
+                <div className="my-4 h-px w-16 mx-auto bg-neutral-300" />
+
+                <p className="font-serif text-lg tracking-wide text-neutral-900">
+                  Carlos Francisco Solís Ramírez
+                </p>
+                <p className="font-serif text-lg tracking-wide text-neutral-900">
+                  Brenda Lissette Higueros Paz
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+
 
         {/* CEREMONIA */}
         <section className="mt-10">
@@ -372,8 +414,8 @@ function Timeline({
 function Monogram() {
   return (
     <span className="font-script text-4xl leading-none text-neutral-900">
-  ED
-</span>
+      ED
+    </span>
 
   );
 }
